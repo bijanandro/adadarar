@@ -1,0 +1,21 @@
+package com.unity3d.scar.adapter.v1920.signals;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+/* JADX INFO: loaded from: classes.dex */
+public class SignalsStorage {
+    private final Map<String, QueryInfoMetadata> _placementQueryInfoMap = new ConcurrentHashMap();
+
+    public Map<String, QueryInfoMetadata> getPlacementQueryInfoMap() {
+        return this._placementQueryInfoMap;
+    }
+
+    public QueryInfoMetadata getQueryInfoMetadata(String str) {
+        return this._placementQueryInfoMap.get(str);
+    }
+
+    public void put(String str, QueryInfoMetadata queryInfoMetadata) {
+        this._placementQueryInfoMap.put(str, queryInfoMetadata);
+    }
+}
